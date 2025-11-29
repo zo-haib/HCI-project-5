@@ -1,0 +1,185 @@
+:root {
+  --pucit-navy: #001b3a;
+  --pucit-blue: #00427a;
+  --pucit-accent: #00a6ff;
+  --pucit-soft: #e6f2ff;
+  --pucit-text: #0f1b2d;
+  --pucit-shadow: rgba(0, 33, 71, 0.4);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--pucit-text);
+  background: linear-gradient(135deg, rgba(0, 27, 58, 0.95), rgba(0, 92, 187, 0.9)),
+    url("https://pucit.edu.pk/wp-content/uploads/2020/12/PUCIT-Old-Campus.jpg") center/cover fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+.container {
+  width: min(820px, 100%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px var(--pucit-shadow);
+  border: 1px solid rgba(0, 92, 187, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.form-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 2px solid rgba(0, 92, 187, 0.15);
+  padding-bottom: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  background: white;
+  border-radius: 50%;
+  padding: 6px;
+  border: 2px solid rgba(0, 92, 187, 0.15);
+}
+
+h1 {
+  margin: 4px 0 0;
+  color: var(--pucit-navy);
+  font-size: 1.9rem;
+}
+
+.subtitle {
+  margin: 0;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--pucit-accent);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.two-col {
+  flex-direction: row;
+  gap: 20px;
+}
+
+.two-col > .icon-row {
+  flex: 1;
+}
+
+.icon-row label {
+  font-weight: 600;
+  color: var(--pucit-blue);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-img {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}
+
+input {
+  width: 100%;
+  background: var(--pucit-soft);
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 92, 187, 0.25);
+  font-size: 1rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  background: #fff;
+  border-color: var(--pucit-accent);
+  box-shadow: 0 0 0 3px rgba(0, 166, 255, 0.25);
+}
+
+.actions {
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--pucit-accent), #0071d9);
+  color: #fff;
+  box-shadow: 0 12px 25px rgba(0, 113, 217, 0.35);
+}
+
+.btn:not(.primary) {
+  background: rgba(0, 66, 122, 0.1);
+  color: var(--pucit-blue);
+  border: 1px solid rgba(0, 66, 122, 0.2);
+}
+.btn.link-btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 35px rgba(0, 66, 122, 0.25);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .form-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}

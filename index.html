@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhanced Contact & Registration Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="form-header">
+      <img
+        src="dcs_logo.png"
+        alt="DCS Logo"
+        class="logo"
+      />
+      <div>
+        <p class="subtitle">Punjab University College of Information Technology</p>
+        <h1>Contact & Registration Form</h1>
+      </div>
+    </div>
+    <form id="regForm" novalidate>
+      <div class="row icon-row">
+        <label for="fullname"><img src="icons/user.svg" class="icon-img" /> Full Name</label>
+        <input type="text" id="fullname" placeholder="Jane Doe" required minlength="3">
+      </div>
+      <div class="row icon-row">
+        <label for="email"><img src="icons/mail.svg" class="icon-img" /> Email</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+      </div>
+      <div class="row two-col">
+        <div class="icon-row">
+          <label for="password"><img src="icons/lock.svg" class="icon-img" /> Password</label>
+          <input type="password" id="password" required minlength="6">
+        </div>
+        <div class="icon-row">
+          <label for="dob"><img src="icons/calendar.svg" class="icon-img" /> Date of Birth</label>
+          <input type="date" id="dob" required>
+        </div>
+      </div>
+      <div class="row actions">
+        <button type="submit" class="btn primary">Submit</button>
+        <button type="reset" class="btn">Reset</button>
+        <a
+          href="https://docs.google.com/forms/d/1ripHcAAd4yxx_qPX8w9QpiZpzxkdULUt6DFy2xeFvvw/edit"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn link-btn"
+          >Open Google Form</a
+        >
+      </div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
